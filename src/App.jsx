@@ -256,7 +256,7 @@ if (isLoading) {
             {
               title: "Quotes Upload Web App", 
               stack: "React · Firebase Firestore",
-              year: "2023",
+              year: "2024",
               points: [
                 "Created quotes app with like/comment features",
                 "Used Firestore for real-time updates & secure storage",
