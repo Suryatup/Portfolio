@@ -251,7 +251,8 @@ if (isLoading) {
                 "Integrated Spring Boot APIs & Firebase Storage for scalability",
                 "Implemented QR-based access & animated dashboard"
               ],
-              highlight: "Smart, fast file sharing for modern users"
+              highlight: "Smart, fast file sharing for modern users",
+              github: "https://github.com/Suryatup/AirDocs"
             },
             {
               title: "Quotes Upload Web App", 
@@ -262,7 +263,8 @@ if (isLoading) {
                 "Used Firestore for real-time updates & secure storage",
                 "Added author-only permissions & clean UI"
               ],
-              highlight: "Simple content publishing with live updates"
+              highlight: "Simple content publishing with live updates",
+              github: "https://github.com/Suryatup/Quotes_Project"
             }
           ].map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
@@ -494,6 +496,26 @@ const ProjectCard = ({ project, index }) => (
     >
       {project.highlight}
     </motion.p>
+    
+    {/* Add GitHub Button */}
+    <motion.div 
+      className="project-links"
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+    >
+      <a 
+        href={project.github} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="btn btn-secondary"
+        style={{ fontSize: '0.75rem', padding: '0.5rem 1rem' }}
+      >
+        <span>View on GitHub</span>
+        <span style={{ marginLeft: '0.5rem' }}>↗</span>
+      </a>
+    </motion.div>
   </motion.div>
 );
 
